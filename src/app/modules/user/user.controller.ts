@@ -17,10 +17,11 @@ const createUser = catchAsync(async (req, res) => {
 }  
 )
 
-const getAllUser = async (req: Request, res: Response) => {
+const getAllUser =catchAsync( async (req, res) => {
     try {
+
+
         const result = await UserServices.getAllUserFromDB();
-    
         res.status(200).json({
             success: true,
             message: "Users are Here",
@@ -31,7 +32,7 @@ const getAllUser = async (req: Request, res: Response) => {
      console.log(err);   
     }
 }
-
+)
 const getSingleUser = async (req: Request, res: Response) => {
     try {
 

@@ -10,5 +10,6 @@ export default {
   jwt_access_secret:process.env.jwt_access_secret,
   jwt_access_expires_in: process.env.jwt_access_expires_in,
   jwt_refresh_secret: process.env.jwt_refresh_secret,
-  jwt_refresh_expires_in:process.env.jwt_refresh_expires_in
+  jwt_refresh_expires_in: process.env.jwt_refresh_expires_in,
+  node_env: process.env.node_env,
 };
