@@ -19,8 +19,6 @@ const createUser = catchAsync(async (req, res) => {
 
 const getAllUser =catchAsync( async (req, res) => {
     try {
-
-
         const result = await UserServices.getAllUserFromDB();
         res.status(200).json({
             success: true,
@@ -33,6 +31,7 @@ const getAllUser =catchAsync( async (req, res) => {
     }
 }
 )
+
 const getSingleUser = async (req: Request, res: Response) => {
     try {
 
