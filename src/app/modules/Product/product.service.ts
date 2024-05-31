@@ -1,7 +1,7 @@
 import QueryBuilder from "../../builder/QueryBuilder"
 import TProduct from "./product.interface"
 import { ProductModel } from "./product.module"
-import { productSearchableFields } from "./student.const"
+import { productSearchableFields } from "./product.const"
 
 
 const createProduct = async (data: TProduct) => {
@@ -16,19 +16,13 @@ const getAllProduct = async (query: Record<string, unknown>) => {
         .sort()
         .paginate()
     
-        
+    
     const meta =await productQuery.countTotal();
     console.log(meta);
     const result = await productQuery.modelQuery;
     return { meta, result };
     
 }
-
-
-
-
-
-
 
 const getSingleProduct = async (id:string) => {
     const result = await ProductModel.findOne({_id:id})
